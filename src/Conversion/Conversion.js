@@ -13,25 +13,23 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Conversion({ data, rate }) {
   const classes = useStyles();
-  const [value, updateValue] = useState();
+  const [value, updateValue] = useState(1);
 
   function onChange(e) {
     let newValue = e.target.value;
     updateValue(newValue);
-    console.log(data.rates);
   }
-
-  function onSubmit() {}
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <TextField
         id="input"
         label="Standard"
+        type="number"
         onChange={onChange}
         value={value}
       />
-      <div></div>
+      <div>{data.rates[rate] * value}</div>
     </form>
   );
 }

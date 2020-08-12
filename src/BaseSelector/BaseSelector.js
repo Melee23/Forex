@@ -12,7 +12,6 @@ export default function BaseSelector({ data, selectBase }) {
   const handleClose = (e) => {
     let newBase = e.target.id;
     if (newBase) {
-      console.log(newBase);
       selectBase(newBase);
     }
     setAnchorEl(null);
