@@ -11,13 +11,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Conversion({ data, rate }) {
+export default function Conversion({ data, rate, pushUp }) {
   const classes = useStyles();
   const [value, updateValue] = useState(1);
 
   function onChange(e) {
     let newValue = e.target.value;
     updateValue(newValue);
+    if (value < 1) {
+      updateValue(1);
+    }
+    pushUp(value);
   }
 
   return (
