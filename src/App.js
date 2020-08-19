@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Menu">
+      <div className="Menu Graph">
         <RateHistory base={obj.base} rate={rate} value={multiplier} />
       </div>
 

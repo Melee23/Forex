@@ -17,3 +17,7 @@
 .App::before {
   content: "Lol Peanut Was here";
 }
+
+.Graph {
+  height: 100vh;
+}
